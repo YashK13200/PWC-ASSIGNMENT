@@ -8,7 +8,7 @@ const AdminDashboard = ({ submissionCount }) => {  // Accept 'submissionCount' p
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const res = await axios.get('https://pwc-assignment-a69n.vercel.app/api/users');
+                const res = await axios.get('https://pwc-backend-xlxh.onrender.com/api/users');
                 setUsers(res.data);
             } catch (err) {
                 console.error(err);
@@ -26,7 +26,7 @@ const AdminDashboard = ({ submissionCount }) => {  // Accept 'submissionCount' p
                     <h3>{user.name}</h3>
                     <p>{user.socialMediaHandle}</p>
                     {user.images.map(image => (
-                        <img key={image} src={`https://pwc-assignment-a69n.vercel.app/${image}`} alt="uploaded" />
+                        <img key={image} src={`https://pwc-backend-xlxh.onrender.com/${image}`} alt="uploaded" />
                     ))}
                 </div>
             ))}
